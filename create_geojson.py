@@ -15,10 +15,12 @@ for k in range(2):
 
 			workstation_index_start = 10+70*(1-k)+1
 
+			workstation_name_base = "00"+str(workstation_index_start+i+10*j)
+			workstation_name = "R"+workstation_name_base[len(workstation_name_base)-3:]
 			workstation = {
 			  "type": "Feature",
 			  "properties": {
-			    "workstation": "R"+str(workstation_index_start+i+10*j)
+			    "workstation": workstation_name
 			  },
 			  "geometry": {
 			    "type": "Polygon",
@@ -84,10 +86,12 @@ for k in range(2):
 		features.append(horizontal_bar)
 
 		for i in range(5):
+			workstation_name_base = "00"+str(workstation_index_start+i+5+10*j)
+			workstation_name = "R"+workstation_name_base[len(workstation_name_base)-3:]
 			workstation = {
 			  "type": "Feature",
 			  "properties": {
-			    "workstation": "R"+str(workstation_index_start+i+5+10*j)
+			    "workstation": workstation_name
 			  },
 			  "geometry": {
 			    "type": "Polygon",
